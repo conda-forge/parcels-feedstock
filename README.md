@@ -17,9 +17,9 @@ for Lagrangian tracking of virtual ocean particles in the petascale age.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/parcels-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/parcels-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/parcels-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/parcels-feedstock/branch/master)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/willirath_parcels-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/willirath_parcels-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/willirath_parcels-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/willirath_parcels-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/willirath_parcels-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/willirath-parcels-feedstock/branch/master)
 
 Current release info
 ====================
