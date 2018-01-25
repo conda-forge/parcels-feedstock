@@ -11,7 +11,7 @@ source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-      - remove_setuptools-scm_dependency.patch
+      - tweak_setup-py.patch
 
 build:
   skip: True  # [py3k or osx]
@@ -25,6 +25,7 @@ requirements:
     - setuptools_scm
   run:
     - python
+    - blas * openblas
     - cachetools >=1.0.0
     - cgen
     - enum34
