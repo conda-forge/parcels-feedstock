@@ -15,7 +15,7 @@ source:
 
 build:
   skip: True  # [py3k or osx]
-  number: 3
+  number: 4
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -24,7 +24,8 @@ requirements:
     - setuptools
   run:
     - python
-    - blas * openblas
+    - blas 1.0 openblas
+    - openblas 0.2.19|0.2.19.*
     - cachetools >=1.0.0
     - cgen
     - enum34
