@@ -24,7 +24,6 @@ requirements:
     - setuptools
   run:
     - python
-    - blas * openblas
     - cachetools >=1.0.0
     - cgen
     - enum34
