@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.0" %}
-{% set sha256 = "d9753572a3f099caf5c17b477753034fe8f714788e588874ade18fd91a573f13" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "b62346eace8d6586f23a6ad3546cb033635a62f040d12838e462ac2952697b9c" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
 
 build:
   skip: True  # [py3k]
-  number: 5
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
