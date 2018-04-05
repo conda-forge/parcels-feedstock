@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "b62346eace8d6586f23a6ad3546cb033635a62f040d12838e462ac2952697b9c" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "be2e28250a04e4fa912ac01b962630b25e9e7978c1f36cfbd36e7993f96d204d" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,6 @@ source:
       - tweak_setup-py.patch
 
 build:
-  skip: True  # [py3k]
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
