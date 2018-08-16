@@ -7,7 +7,7 @@ index 62d218c..d0e3e44 100644
 
  setup(name='parcels',
 -      version='1.0',
-+      version='1.0.1',
++      version='1.0.3',
        description="""Framework for Lagrangian tracking of virtual
        ocean particles in the petascale age.""",
        author="oceanparcels.org team",
