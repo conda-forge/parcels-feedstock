@@ -10,17 +10,17 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-      - tweak_setup-py.patch
 
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
+  host:
+    - pip
   build:
     - python
-    - setuptools
+    - setuptools_scm
   run:
     - python
     - cachetools >=1.0.0
