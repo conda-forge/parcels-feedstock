@@ -17,13 +17,13 @@ build:
   number: 0
 
 requirements:
-  host:
-    - pip
   build:
     - python
     - pip
     - setuptools_scm
     - setuptools_scm_git_archive
+  host:
+    - pip
   run:
     - python
     - cachetools >=1.0.0
