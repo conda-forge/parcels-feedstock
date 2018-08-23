@@ -15,11 +15,10 @@ source:
 
 build:
   number: 0
-  script:
-    - 'echo "tag: 1.0.4, master" > .git_archival.txt'
-    - python -m pip install --no-deps --ignore-installed .
 
 requirements:
+  host:
+    - pip
   build:
     - python
     - pip
