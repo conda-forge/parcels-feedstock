@@ -22,6 +22,13 @@ requirements:
   build:
     - python
     - pip
+    - setuptools
+    - setuptools_scm
+    - setuptools_scm_git_archive
+  host:
+    - python
+    - pip
+    - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
