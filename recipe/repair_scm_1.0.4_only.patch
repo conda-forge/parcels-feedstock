@@ -1,20 +1,5 @@
-diff -rcN a/setup.py b/setup.py
-*** a/setup.py	2018-08-22 14:47:39.000000000 +0200
---- b/setup.py	2018-08-23 17:47:27.000000000 +0200
-***************
-*** 10,16 ****
-        ocean particles in the petascale age.""",
-        author="oceanparcels.org team",
-        use_scm_version={'write_to': 'parcels/_version.py'},
-!       setup_requires=['setuptools_scm'],
-        packages=find_packages(),
-        package_data={'parcels': ['include/*',
-                                  'examples/*']},
---- 10,16 ----
-        ocean particles in the petascale age.""",
-        author="oceanparcels.org team",
-        use_scm_version={'write_to': 'parcels/_version.py'},
-!       setup_requires=['setuptools_scm', 'setuptools_scm_git_archive'],
-        packages=find_packages(),
-        package_data={'parcels': ['include/*',
-                                  'examples/*']},
+diff a/setup.py a/setup.py
+13c13
+<       setup_requires=['setuptools_scm'],
+---
+>       setup_requires=['setuptools_scm', 'setuptools_scm_git_archive'],
