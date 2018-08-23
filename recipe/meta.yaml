@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.0.3" %}
-{% set sha256 = "05d2add3af9784aa4c4b0837ed9b44d1ff0d31dba99d0cd5d9f5abf66a3a6c48" %}
+{% set version = "1.0.4" %}
+{% set sha256 = "ca3c510b27c668c98562b4fcf34472160c9a286c11e16b4055e6a5272b966a4e" %}
 
 package:
   name: {{ name|lower }}
@@ -11,16 +11,18 @@ source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-      - tweak_setup-py.patch
+      - repair_scm_1.0.4_only.patch
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
+    - setuptools_scm
+    - setuptools_scm_git_archive
   run:
     - python
     - cachetools >=1.0.0
