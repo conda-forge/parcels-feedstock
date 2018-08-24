@@ -13,17 +13,10 @@ source:
 
 build:
   number: 0
-  script: pip list; ls -la; {{ PYTHON }} setup.py install --single-version-externally-managed --record record.txtpython setup.py install
-
+  script: "pip list; ls -la; which python; python setup.py install --single-version-externally-managed --record record.txtpython setup.py install"
 
 requirements:
   build:
-    - python
-    - pip
-    - setuptools
-    - setuptools_scm
-    - setuptools_scm_git_archive
-  host:
     - python
     - pip
     - setuptools
