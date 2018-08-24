@@ -11,7 +11,7 @@ source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-      - repair_scm_1.0.4_only.patch
+      - ls -la; cat .git_archival.txt; python setup.py install
 
 build:
   number: 0
