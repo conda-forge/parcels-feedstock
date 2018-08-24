@@ -10,8 +10,10 @@ Feedstock license: BSD 3-Clause
 Summary: Probably A Really Computationally Efficient Lagrangian Simulator
 
 Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
-is an experimental prototype framework aimed at exploring novel approaches
-for Lagrangian tracking of virtual ocean particles in the petascale age.
+is a set of Python classes and methods to create customisable particle
+tracking simulations using output from Ocean Circulation models.
+Parcels can be used to track passive and active particulates such as
+water, plankton, plastic and fish.
 
 
 Current build status
