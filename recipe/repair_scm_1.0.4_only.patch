@@ -1,0 +1,27 @@
+diff --git a/.git_archival.txt b/.git_archival.txt
+new file mode 100644
+index 0000000..0cd22d9
+--- /dev/null
++++ b/.git_archival.txt
+@@ -0,0 +1 @@
++tag: 1.0.4, master
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..00a7b00
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1 @@
++.git_archival.txt  export-subst
+diff --git a/setup.py b/setup.py
+index 4194432..6c1047f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -10,7 +10,7 @@ setup(name='parcels',
+       ocean particles in the petascale age.""",
+       author="oceanparcels.org team",
+       use_scm_version={'write_to': 'parcels/_version.py'},
+-      setup_requires=['setuptools_scm'],
++      setup_requires=['setuptools_scm', 'setuptools_scm_git_archive'],
+       packages=find_packages(),
+       package_data={'parcels': ['include/*',
+                                 'examples/*']},
