@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
 {% set version = "1.0.4" %}
-{% set sha256 = "ca3c510b27c668c98562b4fcf34472160c9a286c11e16b4055e6a5272b966a4e" %}
+{% set sha256 = "6e4b7c813f2dd98e72071ed3c0a3022c5d0a268adcdd268bbdeb3af121213812" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/willirath/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
       - repair_scm_1.0.4_only.patch
 
 build:
   number: 0
-  script: ls -la; cat .git_archival.txt; python setup.py install
+  script: python setup.py install --single-version-externally-managed --record record.txtpython setup.py install
 
 
 requirements:
