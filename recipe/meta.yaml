@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -60,8 +60,10 @@ about:
 
   description: |
     Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
-    is an experimental prototype framework aimed at exploring novel approaches
-    for Lagrangian tracking of virtual ocean particles in the petascale age.
+    is a set of Python classes and methods to create customisable particle 
+    tracking simulations using output from Ocean Circulation models. 
+    Parcels can be used to track passive and active particulates such as 
+    water, plankton, plastic and fish.
   doc_url: http://oceanparcels.org/
   dev_url: https://github.com/OceanParcels/parcels
 
