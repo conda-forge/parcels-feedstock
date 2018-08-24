@@ -13,8 +13,9 @@ source:
 
 build:
   number: 0
-  script: 
+  script:
     - "{{ PYTHON }} setup.py bdist_wheel"
+    - "ls -la"
     - "{{ PYTHON }} -m pip install dist/*.whl --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
