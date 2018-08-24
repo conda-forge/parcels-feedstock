@@ -15,7 +15,7 @@ build:
   number: 0
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir dist"
-    - "ls -la"
+    - "ls -la *"
     - "{{ PYTHON }} -m pip install dist/*.whl --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
