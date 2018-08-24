@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txtpython setup.py install
+  script: pip list; ls -la; {{ PYTHON }} setup.py install --single-version-externally-managed --record record.txtpython setup.py install
 
 
 requirements:
