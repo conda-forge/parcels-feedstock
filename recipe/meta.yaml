@@ -13,12 +13,14 @@ source:
 
 build:
   number: 0
-  script: "ls -la; which python; python setup.py install --single-version-externally-managed --record record.txtpython setup.py install"
+  script: "pip list; ls -la; which python; python setup.py bdist_wheel; pip install dist/*.whl"
 
 requirements:
   build:
     - python
     - setuptools
+    - setuptools_scm
+    - setuptools_scm_git_archive
   run:
     - python
     - cachetools >=1.0.0
