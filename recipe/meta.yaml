@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.0.3" %}
-{% set sha256 = "05d2add3af9784aa4c4b0837ed9b44d1ff0d31dba99d0cd5d9f5abf66a3a6c48" %}
+{% set version = "1.0.5" %}
+{% set sha256 = "f374e2d1d32ea51fe16243fe78e76f51b89dc7aa78724431b1746b53109903e1" %}
 
 package:
   name: {{ name|lower }}
@@ -10,17 +10,21 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-      - tweak_setup-py.patch
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script:
+    - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
+    - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
 
 requirements:
   build:
     - python
+    - pip
     - setuptools
+    - setuptools_scm
+    - setuptools_scm_git_archive
+    - wheel
   run:
     - python
     - cachetools >=1.0.0
