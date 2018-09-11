@@ -63,7 +63,7 @@ about:
     is a set of Python classes and methods to create customisable particle 
     tracking simulations using output from Ocean Circulation models. 
     Parcels can be used to track passive and active particulates such as 
-    water, plankton, plastic and fish.
+    water, nutrients, plankton, plastic and fish.
   doc_url: http://oceanparcels.org/
   dev_url: https://github.com/OceanParcels/parcels
 
