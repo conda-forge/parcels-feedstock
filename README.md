@@ -13,7 +13,7 @@ Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
 is a set of Python classes and methods to create customisable particle
 tracking simulations using output from Ocean Circulation models.
 Parcels can be used to track passive and active particulates such as
-water, plankton, plastic and fish.
+water, nutrients, plankton, plastic and fish.
 
 
 Current build status
