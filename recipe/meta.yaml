@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.1.1" %}
-{% set sha256 = "0747556b184164e95c96d9a757bc0b09554fc3b8e85d3fb9de472dd9c3725b0a" %}
+{% set version = "2.0.0beta" %}
+{% set sha256 = "76580888125cadd4978486d8dbfeadace33985ee366782374f81901edf4a6f76" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -42,7 +42,6 @@ requirements:
     - scipy >=0.16.0
     - six >=1.10.0
     - xarray >=0.10.8
-    - netcdftime
     - cftime
 
 test:
