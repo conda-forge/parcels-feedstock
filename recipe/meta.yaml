@@ -36,7 +36,8 @@ requirements:
     - m2w64-toolchain  # [win]
     - matplotlib >=2.0.2
     - netcdf4 >=1.1.9,<=1.4.1
-    - numpy >=1.9.1
+    - numpy >=1.9  # [linux64 or osx]
+    - numpy >=1.11  # [win]
     - progressbar2
     - pymbolic
     - python-dateutil
