@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.0.5" %}
-{% set sha256 = "f374e2d1d32ea51fe16243fe78e76f51b89dc7aa78724431b1746b53109903e1" %}
+{% set version = "2.0.0beta" %}
+{% set sha256 = "76580888125cadd4978486d8dbfeadace33985ee366782374f81901edf4a6f76" %}
 
 package:
   name: {{ name|lower }}
@@ -12,11 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-<<<<<<< HEAD
-  number: 1
-=======
-  number: 2
->>>>>>> conda-forge/master
+  number: 1000
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -32,13 +28,13 @@ requirements:
   run:
     - python
     - cachetools >=1.0.0
+    - cftime
     - cgen
     - enum34  # [py2k]
-    - ffmpeg >=3.2.3,<3.2.6
     - gcc_linux-64  # [linux]
     - clang_osx-64  # [osx]
     - m2w64-toolchain  # [win]
-    - matplotlib 2.0.2
+    - matplotlib >=2.0.2
     - netcdf4 >=1.1.9
     - numpy >=1.9.1
     - progressbar2
@@ -46,7 +42,7 @@ requirements:
     - python-dateutil
     - scipy >=0.16.0
     - six >=1.10.0
-    - xarray >=0.5.1
+    - xarray >=0.10.8
 
 test:
   imports:
@@ -67,7 +63,7 @@ about:
     is a set of Python classes and methods to create customisable particle 
     tracking simulations using output from Ocean Circulation models. 
     Parcels can be used to track passive and active particulates such as 
-    water, plankton, plastic and fish.
+    water, nutrients, plankton, plastic and fish.
   doc_url: http://oceanparcels.org/
   dev_url: https://github.com/OceanParcels/parcels
 
