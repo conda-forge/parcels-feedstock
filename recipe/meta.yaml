@@ -52,7 +52,7 @@ test:
     - parcels.kernels
     - parcels.tools
   commands:
-    - parcels_get_examples parcels_examples
+    - parcels_get_examples parcels_examples  # [linux or osx]
 
 about:
   home: http://github.com/OceanParcels/parcels
