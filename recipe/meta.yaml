@@ -51,6 +51,8 @@ test:
     - parcels.scripts
     - parcels.kernels
     - parcels.tools
+  commands:
+    - parcels_get_examples parcels_examples
 
 about:
   home: http://github.com/OceanParcels/parcels
