@@ -12,10 +12,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
+  entry_points:
+    - parcels_get_examples = parcels.scripts.get_examples:main
 
 requirements:
   build:
@@ -52,7 +54,7 @@ test:
     - parcels.kernels
     - parcels.tools
   commands:
-    - parcels_get_examples parcels_examples  # [linux or osx]
+    - parcels_get_examples parcels_examples
 
 about:
   home: http://github.com/OceanParcels/parcels
