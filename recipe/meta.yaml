@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "7456ae52c81376ab2af99852245f813a74e6f3eba3f213907d2e1bc92b378b75" %}
+{% set version = "2.0.0beta2" %}
+{% set sha256 = "557b282b260c496d077f479905d9f6b0d5f93f6a0606098ef596fc3ec8250a49" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -28,21 +28,22 @@ requirements:
   run:
     - python
     - cachetools >=1.0.0
+    - cftime
     - cgen
     - enum34  # [py2k]
-    - ffmpeg >=3.2.3,<3.2.6
     - gcc_linux-64  # [linux]
     - clang_osx-64  # [osx]
     - m2w64-toolchain  # [win]
-    - matplotlib 2.0.2
-    - netcdf4 >=1.1.9
-    - numpy >=1.9.1
+    - matplotlib >=2.0.2
+    - netcdf4 >=1.1.9,<=1.4.1
+    - numpy >=1.9  # [linux64 or osx]
+    - numpy >=1.11  # [win]
     - progressbar2
     - pymbolic
     - python-dateutil
     - scipy >=0.16.0
     - six >=1.10.0
-    - xarray >=0.5.1
+    - xarray >=0.10.8
 
 test:
   imports:
@@ -50,6 +51,8 @@ test:
     - parcels.scripts
     - parcels.kernels
     - parcels.tools
+  commands:
+    - parcels_get_examples parcels_examples  # [linux or osx]
 
 about:
   home: http://github.com/OceanParcels/parcels
