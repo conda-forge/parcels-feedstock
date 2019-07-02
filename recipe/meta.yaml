@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -37,7 +37,7 @@ requirements:
     - clang_osx-64  # [osx]
     - m2w64-toolchain  # [win]
     - matplotlib >=2.0.2
-    - netcdf4 >=1.1.9,<=1.4.1
+    - netcdf4 >=1.1.9
     - numpy >=1.9  # [linux64 or osx]
     - numpy >=1.11  # [win]
     - progressbar2
