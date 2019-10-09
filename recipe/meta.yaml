@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "60cb70ac706a612b30e508efb364f90300b89e8dc3d8d33b5125310d38f5f4d7" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "dd66dca5470af31d19439e61a210958d65185b9aac673ba8f8783a0eda69e8f4" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
