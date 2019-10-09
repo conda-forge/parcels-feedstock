@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "60cb70ac706a612b30e508efb364f90300b89e8dc3d8d33b5125310d38f5f4d7" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "dd66dca5470af31d19439e61a210958d65185b9aac673ba8f8783a0eda69e8f4" %}
 
 package:
   name: {{ name|lower }}
@@ -32,6 +32,7 @@ requirements:
     - cachetools >=1.0.0
     - cftime
     - cgen
+    - dask
     - enum34  # [py2k]
     - gcc_linux-64  # [linux]
     - clang_osx-64  # [osx]
