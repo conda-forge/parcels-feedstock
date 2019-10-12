@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -47,7 +47,6 @@ requirements:
     - scipy >=0.16.0
     - six >=1.10.0
     - xarray >=0.10.8
-    - dask
 
 test:
   imports:
