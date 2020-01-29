@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "2.1.2" %}
-{% set sha256 = "dfdbfd7aef3076390ed3a1148f04858c3bfb747f0ba2a9e410d33e74f93e67dd" %}
+{% set version = "2.1.3" %}
+{% set sha256 = "bf27f6b0e25fb72826f53e26d732d8c8725518736910909b3ed04f7d356f59b8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
     - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
@@ -77,4 +77,5 @@ extra:
   recipe-maintainers:
     - erikvansebille
     - delandmeterp
+    - ckehl
     - willirath
