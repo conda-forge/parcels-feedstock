@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "2.1.4" %}
-{% set sha256 = "512bc09a3ebe12a151097dac2d65aa9475845cb0b85a15355e3950cd6116b55d" %}
+{% set version = "2.1.5" %}
+{% set sha256 = "3c4abc4d5f9e13af9d1960f769f240fd872b7f8bacb0eaca94e97cba84a226bd" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,8 @@ source:
 build:
   number: 0
   script:
-    - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
-    - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
+    - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
+    - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
   entry_points:
     - parcels_get_examples = parcels.scripts.get_examples:main
 
@@ -62,7 +62,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Probably A Really Computationally Efficient Lagrangian Simulator'
+  summary: Probably A Really Computationally Efficient Lagrangian Simulator
 
   description: |
     Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
