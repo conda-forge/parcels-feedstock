@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "2.2.0" %}
-{% set sha256 = "50e9ce50b598ae7b6ff1e3c7b71d18ca0e05ae4470d5ebc8e7ca93290cee2ed1" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "4149cee2386ed0bcc472a5af5903bd8fd1205da856cf0c4e51b4c79dfe9decea" %}
 
 package:
   name: {{ name|lower }}
