@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
@@ -20,7 +20,7 @@ build:
     - parcels_get_examples = parcels.scripts.get_examples:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
