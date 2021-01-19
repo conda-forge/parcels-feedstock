@@ -1,21 +1,17 @@
 {% set name = "parcels" %}
 {% set version = "2.2.1" %}
-{% set sha256 = "4149cee2386ed0bcc472a5af5903bd8fd1205da856cf0c4e51b4c79dfe9decea" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: ebdfbbac15bcee84e80a13cd6bb1ffd49ee0ee9f129fd241cff41041ebe218fb
 
 build:
   number: 1
-  script:
-    - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
-    - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - parcels_get_examples = parcels.scripts.get_examples:main
 
