@@ -20,7 +20,7 @@ build:
     - parcels_get_examples = parcels.scripts.get_examples:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
