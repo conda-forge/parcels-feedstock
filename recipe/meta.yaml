@@ -1,6 +1,6 @@
 {% set name = "parcels" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "4149cee2386ed0bcc472a5af5903bd8fd1205da856cf0c4e51b4c79dfe9decea" %}
+{% set version = "2.2.2" %}
+{% set sha256 = "98db404d0a3c21546394376ff060aec14942130a906ef36ce00e61c030f7c723" %}
 
 package:
   name: {{ name|lower }}
@@ -20,7 +20,7 @@ build:
     - parcels_get_examples = parcels.scripts.get_examples:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools
