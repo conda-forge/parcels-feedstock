@@ -52,7 +52,6 @@ test:
   imports:
     - parcels
     - parcels.scripts
-    - parcels.kernels
     - parcels.tools
   commands:
     - parcels_get_examples parcels_examples
