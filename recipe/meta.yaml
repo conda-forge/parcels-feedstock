@@ -39,6 +39,7 @@ requirements:
     - numpy >=1.9  # [linux64 or osx]
     - numpy >=1.11  # [win]
     - pytest
+    - pymbolic
     - psutil
     - scipy >=0.16.0
     - tqdm
