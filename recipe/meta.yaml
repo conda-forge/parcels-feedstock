@@ -52,6 +52,7 @@ test:
     - parcels.tools
   commands:
     - parcels_get_examples parcels_examples
+    - python parcels/examples/example_peninsula.py
 
 about:
   home: http://github.com/OceanParcels/parcels
