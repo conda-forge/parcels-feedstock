@@ -29,7 +29,7 @@ requirements:
     - setuptools_scm_git_archive
     - wheel
   run:
-    - python >= 3.8
+    - python
     - cftime
     - cgen
     - dask
