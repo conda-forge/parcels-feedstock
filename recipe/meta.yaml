@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 56b095fa83b195868a172d03dd396a074ef1e4e3cfe38fe24a481ecbf8002315
+  sha256: 148d4559b67bbd23b7e1aaf73c76f0dbfd0d648216b130a9329cad198caf6b48
 
 build:
   number: 0
