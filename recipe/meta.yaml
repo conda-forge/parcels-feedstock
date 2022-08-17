@@ -35,8 +35,7 @@ requirements:
     - dask
     - enum34  # [py2k]
     - gcc_linux-64  # [linux]
-    - clang_osx-64  # [osx-64]
-    - clang_osx-arm64  # [osx-arm64]
+    - clang_osx-64  # [osx]
     - m2w64-toolchain  # [win]
     - matplotlib-base >=2.0.2
     - netcdf4 >=1.1.9
