@@ -10,7 +10,7 @@ source:
   sha256: 760595f3e574bcf4eabb6f7ee31557c8035c54d1a7925f0f57481b1ef2866856
 
 build:
-  number: 1
+  number: 2
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
