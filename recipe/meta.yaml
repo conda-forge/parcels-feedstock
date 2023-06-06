@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<38]
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
@@ -53,7 +54,6 @@ requirements:
 test:
   imports:
     - parcels
-    - parcels.scripts
     - parcels.tools
   commands:
     - parcels_get_examples parcels_examples
