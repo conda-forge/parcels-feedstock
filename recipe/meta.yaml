@@ -1,5 +1,5 @@
 {% set name = "parcels" %}
-{% set version = "2.4.1" %}
+{% set version = "2.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 760595f3e574bcf4eabb6f7ee31557c8035c54d1a7925f0f57481b1ef2866856
+  sha256: 735712e50e29c0a9284d7c5b917900fc6258c31de0d21d2f90292c183d98e695
 
 build:
-  number: 3
+  number: 0
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
