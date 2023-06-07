@@ -15,8 +15,6 @@ build:
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
-  entry_points:
-    - parcels_convert_npydir_to_netcdf = parcels.scripts.convert_npydir_to_netcdf:main
 
 requirements:
   build:
@@ -54,10 +52,8 @@ requirements:
 test:
   imports:
     - parcels
-    - parcels.scripts
-    - parcels.tools
   commands:
-    - parcels_convert_npydir_to_netcdf --help
+    - {{ PYTHON }} docs/examples/example_peninsula.py
 
 about:
   home: http://github.com/OceanParcels/parcels
