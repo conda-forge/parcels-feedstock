@@ -47,14 +47,13 @@ requirements:
     - scipy >=0.16.0
     - tqdm
     - xarray >=0.10.8
-    - wget
     - zarr
 
 test:
   imports:
     - parcels
   commands:
-    - wget https://raw.githubusercontent.com/OceanParcels/parcels/master/docs/examples/example_peninsula.py
+    - curl wget https://raw.githubusercontent.com/OceanParcels/parcels/master/docs/examples/example_peninsula.py > example_peninsula.py
     - python example_peninsula.py
 
 about:
