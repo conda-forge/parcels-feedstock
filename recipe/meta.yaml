@@ -53,7 +53,8 @@ test:
   imports:
     - parcels
   commands:
-    - python docs/examples/example_peninsula.py
+    - wget https://raw.githubusercontent.com/OceanParcels/parcels/master/docs/examples/example_peninsula.py
+    - python example_peninsula.py
 
 about:
   home: http://github.com/OceanParcels/parcels
