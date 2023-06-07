@@ -47,6 +47,7 @@ requirements:
     - scipy >=0.16.0
     - tqdm
     - xarray >=0.10.8
+    - wget
     - zarr
 
 test:
