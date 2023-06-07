@@ -1,5 +1,5 @@
 {% set name = "parcels" %}
-{% set version = "2.4.1" %}
+{% set version = "2.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,14 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 760595f3e574bcf4eabb6f7ee31557c8035c54d1a7925f0f57481b1ef2866856
+  sha256: 069051f3cf30bda3f3c301682855ec0b40e00b3ebce0f20f7f10f765465eb308
 
 build:
-  number: 3
+  number: 0
+  skip: True  # [py<38]
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
-  entry_points:
-    - parcels_get_examples = parcels.scripts.get_examples:main
 
 requirements:
   build:
@@ -53,11 +52,9 @@ requirements:
 test:
   imports:
     - parcels
-    - parcels.scripts
-    - parcels.tools
   commands:
-    - parcels_get_examples parcels_examples
-    - python parcels_examples/example_peninsula.py
+    - curl wget https://raw.githubusercontent.com/OceanParcels/parcels/master/docs/examples/example_peninsula.py > example_peninsula.py
+    - python example_peninsula.py
 
 about:
   home: http://github.com/OceanParcels/parcels
