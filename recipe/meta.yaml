@@ -10,7 +10,7 @@ source:
   sha256: 069051f3cf30bda3f3c301682855ec0b40e00b3ebce0f20f7f10f765465eb308
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py<38]
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
@@ -47,7 +47,7 @@ requirements:
     - scipy >=0.16.0
     - tqdm
     - xarray >=0.10.8
-    - zarr
+    - zarr >=2.11.0
 
 test:
   imports:
