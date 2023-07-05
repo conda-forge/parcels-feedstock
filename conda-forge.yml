@@ -4,7 +4,7 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
-# noarch_platforms:
-#   - linux_64
-#   - osx_64
-#   - win_64
+noarch_platforms:
+  - linux_64
+  - osx_64
+  - win_64
