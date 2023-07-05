@@ -11,28 +11,25 @@ source:
 
 build:
   number: 2
-  skip: True  # [py<38]
+  noarch: python
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
     - {{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
     - pip
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
     - wheel
   run:
-    - python
+    - python  >=3.8
     - cftime
     - cgen
     - dask
-    - enum34  # [py2k]
+    - enum34
     - gcc_linux-64  # [linux]
     - clang_osx-64  # [osx]
     - m2w64-toolchain  # [win]
