@@ -29,7 +29,6 @@ requirements:
     - cftime
     - cgen
     - dask
-    - enum34
     - matplotlib-base >=2.0.2
     - netcdf4 >=1.1.9
     - numpy >=1.11
