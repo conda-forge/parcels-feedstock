@@ -49,7 +49,6 @@ requirements:
 
 test:
   requires:
-    - gcc
     - pip
   imports:
     - parcels
