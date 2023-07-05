@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 069051f3cf30bda3f3c301682855ec0b40e00b3ebce0f20f7f10f765465eb308
+  patches:
+    - patches/0001-delete-entry-point.patch
 
 build:
   number: 2

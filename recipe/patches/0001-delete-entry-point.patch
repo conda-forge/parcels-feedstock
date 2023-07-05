@@ -1,0 +1,21 @@
+From df84e4e28dd10c3445dd64ec3cfbfcc2c1aaaff1 Mon Sep 17 00:00:00 2001
+From: Erik van Sebille <erikvansebille@gmail.com>
+Date: Thu, 8 Jun 2023 08:34:57 +0200
+Subject: [PATCH] Removing legacy parcels_convert_npydir_to_netcdf from
+ setup.py
+
+---
+ setup.py | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index 4834b2b00..8ad51a5d0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -18,6 +18,4 @@
+       python_requires='>=3.8',
+       packages=find_packages(),
+       package_data={'parcels': ['include/*']},
+-      entry_points={'console_scripts': [
+-          'parcels_convert_npydir_to_netcdf = parcels.scripts.convert_npydir_to_netcdf:main']}
+       )
