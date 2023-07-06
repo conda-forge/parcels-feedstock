@@ -31,7 +31,6 @@ requirements:
     - cftime
     - cgen
     - dask
-    - c-compiler
     - __unix           # [unix]
     - __win            # [win]
     - c-compiler       # [linux]
