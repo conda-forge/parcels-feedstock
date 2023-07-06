@@ -33,7 +33,7 @@ requirements:
     - dask
     - __unix           # [unix]
     - __win            # [win]
-    - c-compiler       # [linux]
+    - c-compiler       # [unix]
     - m2w64-toolchain  # [win]
     - matplotlib-base >=2.0.2
     - netcdf4 >=1.1.9
