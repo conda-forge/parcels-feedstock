@@ -57,7 +57,7 @@ test:
     - python example_peninsula.py
 
 about:
-  home: http://github.com/OceanParcels/parcels
+  home: https://github.com/OceanParcels/parcels
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
@@ -69,7 +69,7 @@ about:
     tracking simulations using output from Ocean Circulation models. 
     Parcels can be used to track passive and active particulates such as 
     water, nutrients, plankton, plastic and fish.
-  doc_url: http://oceanparcels.org/
+  doc_url: https://oceanparcels.org/
   dev_url: https://github.com/OceanParcels/parcels
 
 extra:
