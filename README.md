@@ -3,7 +3,7 @@ About parcels-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parcels-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/OceanParcels/parcels
+Home: https://github.com/OceanParcels/parcels
 
 Package license: MIT
 
@@ -11,7 +11,7 @@ Summary: Probably A Really Computationally Efficient Lagrangian Simulator
 
 Development: https://github.com/OceanParcels/parcels
 
-Documentation: http://oceanparcels.org/
+Documentation: https://oceanparcels.org/
 
 Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
 is a set of Python classes and methods to create customisable particle
