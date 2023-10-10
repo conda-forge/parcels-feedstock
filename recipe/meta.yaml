@@ -1,5 +1,5 @@
 {% set name = "parcels" %}
-{% set version = "2.4.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 069051f3cf30bda3f3c301682855ec0b40e00b3ebce0f20f7f10f765465eb308
+  sha256: 937cc967879061ab71baf768c286aafbcfe165ccfbf4674098b244b46e5791c3
   patches:
     - patches/0001-delete-entry-point.patch
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} setup.py bdist_wheel --dist-dir=dist
