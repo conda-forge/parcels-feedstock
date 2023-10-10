@@ -13,7 +13,7 @@ build:
   number: 0
   noarch: python
   script:
-    - pip install --no-build-isolation --no-deps -e .
+    - {{ PYTHON }} -m pip install --no-build-isolation --no-deps -e .
 
 requirements:
   host:
