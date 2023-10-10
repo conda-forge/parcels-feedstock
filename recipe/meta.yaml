@@ -52,6 +52,7 @@ test:
     - parcels
   commands:
     - pip check
+    - pip install --no-build-isolation --no-deps -e .
     - if [ -z ${CC+x} ]; then echo "\$CC not set"; exit 1; else echo "CC is set to $CC"; fi  # [unix]
     - curl https://raw.githubusercontent.com/OceanParcels/parcels/master/docs/examples/example_peninsula.py > example_peninsula.py
     - python example_peninsula.py
