@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 937cc967879061ab71baf768c286aafbcfe165ccfbf4674098b244b46e5791c3
+  sha256: 62758633c095b876296b795ed5899581c63326313d9181815420de1e49fa694a
 
 build:
   number: 0
@@ -67,9 +67,9 @@ about:
 
   description: |
     Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
-    is a set of Python classes and methods to create customisable particle 
-    tracking simulations using output from Ocean Circulation models. 
-    Parcels can be used to track passive and active particulates such as 
+    is a set of Python classes and methods to create customisable particle
+    tracking simulations using output from Ocean Circulation models.
+    Parcels can be used to track passive and active particulates such as
     water, nutrients, plankton, plastic and fish.
   doc_url: https://oceanparcels.org/
   dev_url: https://github.com/OceanParcels/parcels
