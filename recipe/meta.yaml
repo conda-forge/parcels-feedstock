@@ -1,5 +1,5 @@
 {% set name = "parcels" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 62758633c095b876296b795ed5899581c63326313d9181815420de1e49fa694a
+  sha256: d64afaddbea9031025a6727539fbd24c09ee79d0cfae9627208f243e51e4a599
 
 build:
   number: 0
