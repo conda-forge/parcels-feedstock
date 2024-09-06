@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python >=3.10
-    - pip
+    - pip <24 # upperbound until https://github.com/conda-forge/cgen-feedstock/issues/11 is closed
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
