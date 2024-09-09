@@ -1,5 +1,5 @@
 {% set name = "parcels" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 4ccb5911f87aa0eeb1771aa1c67982a7469279648cfbce04906a6e9695ab4406
+  sha256: dc04a71aa6dc7f52b6863ddcc707d2efaec4bce8b0103a98e723272deb2e7438
 
 build:
   number: 0
@@ -17,14 +17,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - pip
+    - python >=3.10
+    - pip <24 # upperbound until https://github.com/conda-forge/cgen-feedstock/issues/11 is closed
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
     - wheel
   run:
-    - python  >=3.8
+    - python  >=3.10
     - cftime
     - cgen
     - dask
@@ -76,6 +76,5 @@ about:
 extra:
   recipe-maintainers:
     - erikvansebille
-    - delandmeterp
-    - ckehl
+    - veckothegecko
     - willirath
