@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: dc04a71aa6dc7f52b6863ddcc707d2efaec4bce8b0103a98e723272deb2e7438
+  sha256: 755398a5d1fffa73495d73e54befc3fcb949d37499918ed2d1d89625f1636ae7
 
 build:
   number: 0
@@ -75,6 +75,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - VeckoTheGecko
     - erikvansebille
-    - veckothegecko
     - willirath
