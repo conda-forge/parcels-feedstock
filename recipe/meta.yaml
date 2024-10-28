@@ -1,5 +1,5 @@
 {% set name = "parcels" %}
-{% set version = "3.0.6" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/oceanparcels/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d0226541c04fc27f59389d7db2aa114765d628745ba53725839aeac075520284
+  sha256: 38bc720b10b378d29c3b7eff569d3755b9b43ee722705c68b0d2474ccd98bd5b
 
 build:
   number: 0
   noarch: python
   script:
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
