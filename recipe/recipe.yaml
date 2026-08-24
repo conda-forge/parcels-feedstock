@@ -57,7 +57,7 @@ tests:
   - python:
       imports:
         - parcels
-      pip_check: true
+      pip_check: false # TODO: Change to true once https://github.com/OpenDrift/trajan/pull/241 is merged, and trajan has new release
       python_version:
         - ${{ python_min }}.*
         - "*"
