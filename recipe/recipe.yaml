@@ -1,20 +1,19 @@
 schema_version: 1
 
 context:
-  python_min: "3.10"
   name: parcels
-  version: "3.1.4"
+  version: "4.0.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://github.com/oceanparcels/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: 0eee9745c3aca9b4b4399bb04705480964e9d4c5235f0d82ad251e7a560f7837
+  url: https://github.com/Parcels-code/${{ name }}/archive/v${{ version }}.tar.gz
+  sha256: c6214c39202aeb0ee0858529a3a778403cb07e8190fc3e862624ec36f1d3feea
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -29,60 +28,41 @@ requirements:
     - wheel
   run:
     - python >=${{ python_min }}
-    - cftime
-    - cgen
-    - dask
-    - if: unix
-      then: __unix
-    - if: win
-      then: __win
-    - if: unix
-      then: c-compiler
-    - if: win
-      then: m2w64-toolchain
-    - matplotlib-base >=2.0.2
-    - netcdf4 >=1.1.9
-    - numpy >=1.11
-    - platformdirs
-    - psutil
-    - pymbolic
-    - pytest
-    - scipy >=0.16.0
-    - trajan
-    - tqdm
-    - xarray >=0.10.8
-    - zarr >=2.11.0,!=2.18.0,<3
+    - cf_xarray >=0.10.0
+    - cftime >=1.6.3
+    - dask >=2025.7.0
+    - holoviews >=1.22.0 # https://github.com/prefix-dev/rattler-build/issues/2326
+    - netcdf4 >=1.6.0
+    - numpy >=2.2.0
+    - pandas >=2.3
+    - polars >=1.32.0
+    - pooch >=1.8.0
+    - pyarrow >=21.0.0
+    - pyogrio # needed for geopandas (uxarray -> geoviews -> geopandas -> pyogrio, but for some reason conda doesn't pick it up automatically)
+    - tabulate >=0.9.0
+    - tqdm >=4.67.0
+    - uxarray >=2026.04.1
+    - xarray >=2025.8.0
+    - zarr >=3.1
 
 tests:
   - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       imports:
         - parcels
-      pip_check: true
-      python_version: ${{ python_min }}
-  - requirements:
-      run:
-        - pip
-        - curl
-        - python ${{ python_min }}.*
-    script:
-      # - if: unix
-      #   then: if [ -z ${CC+x} ]; then echo "\$CC not set"; exit 1; else echo "CC is set to $CC"; fi
-      - curl https://raw.githubusercontent.com/OceanParcels/parcels/v3.1.4/docs/examples/example_peninsula.py > example_peninsula.py
-      - python example_peninsula.py
+      pip_check: false # Remove line to enable `pip check`. Do when next minor (vx.this.x) of uxarray comes out (currently its resolving to `v2026.08.0` which has broken metadata https://github.com/UXARRAY/uxarray/issues/1542#issuecomment-5390203863 )
 
 about:
   license: MIT
   license_file: LICENSE.md
-  summary: Probably A Really Computationally Efficient Lagrangian Simulator
+  summary: Parcels - A highly customisable Lagrangian simulation framework
   description: |
-    Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
-    is a set of Python classes and methods to create customisable particle
-    tracking simulations using output from Ocean Circulation models.
-    Parcels can be used to track passive and active particulates such as
-    water, nutrients, plankton, plastic and fish.
-  homepage: https://github.com/OceanParcels/parcels
-  repository: https://github.com/OceanParcels/parcels
-  documentation: https://oceanparcels.org/
+    Parcels provides a set of Python classes and methods to create customisable particle tracking simulations using gridded output from geoscientific circulation models.
+  homepage: https://github.com/Parcels-code/parcels
+  repository: https://github.com/Parcels-code/parcels
+  documentation: https://parcels-code.org/
 
 extra:
   recipe-maintainers:
