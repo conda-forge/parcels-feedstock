@@ -3,21 +3,17 @@ About parcels-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parcels-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/OceanParcels/parcels
+Home: https://github.com/Parcels-code/parcels
 
 Package license: MIT
 
-Summary: Probably A Really Computationally Efficient Lagrangian Simulator
+Summary: Parcels - A highly customisable Lagrangian simulation framework
 
-Development: https://github.com/OceanParcels/parcels
+Development: https://github.com/Parcels-code/parcels
 
-Documentation: https://oceanparcels.org/
+Documentation: https://parcels-code.org/
 
-Parcels (Probably A Really Computationally Efficient Lagrangian Simulator)
-is a set of Python classes and methods to create customisable particle
-tracking simulations using output from Ocean Circulation models.
-Parcels can be used to track passive and active particulates such as
-water, nutrients, plankton, plastic and fish.
+Parcels provides a set of Python classes and methods to create customisable particle tracking simulations using gridded output from geoscientific circulation models.
 
 Current build status
 ====================
