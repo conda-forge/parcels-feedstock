@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: parcels
-  version: "4.0.2"
+  version: "4.0.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/Parcels-code/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: 2ab59d6ac3649c2fe84401450fb85859192521d2decc1a1da12d9977ac0b94be
+  sha256: 440c327203565ff195fd48f4575fc8f728fd228215df16b4844dcdd1bb83590a
 
 build:
   number: 0
